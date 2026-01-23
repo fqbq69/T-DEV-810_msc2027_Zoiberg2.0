@@ -1,2 +1,29 @@
 Miniconda3-latest-MacOSX-x86_64.sh
 *.sh
+
+cat >> .gitignore << 'EOF'
+
+# Data (X-ray images can be huge)
+data/**
+
+# Trained models (can be huge)
+models/*.pt
+models/*.pth
+models/*.pkl
+models/*.joblib
+models/*.h5
+
+# Results exports
+results/metrics/*.csv
+results/metrics/*.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+EOF

@@ -1,0 +1,23 @@
+name: zoidberg-dl
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy<2
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyter
+  - ipykernel
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+  - pip
+  - pip:
+      - tqdm
+      - pillow
+      - opencv-python
+      - torchmetrics

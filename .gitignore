@@ -1,30 +1,32 @@
-Miniconda3-latest-MacOSX-x86_64.sh
-*.sh
+# Données (trop lourdes + confidentielles)
+data/train/malade/*
+data/train/non_malade/*
+data/val/malade/*
+data/val/non_malade/*
+data/test/malade/*
+data/test/non_malade/*
+!**/.gitkeep
 
-cat >> .gitignore << 'EOF'
-
-# Data (X-ray images can be huge)
-data/**
-
-# Trained models (can be huge)
+# Modèles entraînés
 models/*.pt
-models/*.pth
 models/*.pkl
-models/*.joblib
-models/*.h5
-
-# Results exports
-results/metrics/*.csv
-results/metrics/*.json
-
-# Jupyter
-.ipynb_checkpoints/
+models/*.pth
 
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
 
 # macOS
 .DS_Store
-EOF
+
+# Conda
+*.lock.yml
 database/
